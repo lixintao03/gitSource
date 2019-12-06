@@ -1,0 +1,54 @@
+.docs-pictures {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.docs-pictures>li {
+	display: inline-block;
+	width: 32%;
+	margin: 5px 5px -1px 0;
+	border: 1px solid transparent;
+	position: relative;
+	/*overflow: hidden;*/ /*影响了删除按钮显示*/
+}
+
+.liImg {
+	cursor: -webkit-zoom-in;
+	cursor: zoom-in;
+	width: 100%;
+	height: 120px;
+}
+/* * { margin: 0; padding: 0;} */
+#dowebok {
+	width: 100%;
+	margin: 0 auto;
+	font-size: 0;
+}
+
+.context-menu a {
+	display: block;
+	padding: 3px;
+	text-decoration: none;
+	color: #333;
+}
+
+.context-menu a:hover {
+	background-color: #666;
+	color: white;
+}
+
+.closeLayer {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	/*border: 1px solid red;*/
+}
+
+.closeLayer img {
+	/*display: none;*/
+	/* width:100%; */
+	display: block;
+	/*border: 1px solid red;*/
+}

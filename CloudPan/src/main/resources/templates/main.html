@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="../img/titleLogo.png" type="img/x-ico" />
+<title>PicturesShop</title>
+<link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="../css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="../css/style.css">
+<link type="text/css" rel="stylesheet" href="../css/main.css">
+<link type="text/css" rel="stylesheet" href="../css/viewer.min.css">
+<link type="text/css" rel="stylesheet" href="../css/jquery.contextMenu.css">
+<link type="text/css" rel="stylesheet" href="../css/shake.css">
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../owl-carousel/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="../owl-carousel/owl.theme.css">
+<link rel="stylesheet" type="text/css" href="../owl-carousel/owl.transitions.css">
+<link rel="stylesheet" type="text/css" href="../css/templateCss.css">
+<style>
+
+</style>
+</head>
+<body>
+	<div class="header-bg">
+		<div class="container">
+			<div class="row flex">
+				<div class="col-xs-12 col-sm-5 col-md-4 flex">
+					<a href="main"> 
+						<img src="../img/logo.png" alt="photoMorket"/>
+					</a>
+				</div>
+				<div class="col-xs-12 col-sm-7 col-md-8 flex flex-center">
+					<!-- Menu -->
+					<ul class="nav nav-pills">
+						<li role="presentation">
+							<a href="#" id="cart" data-toggle="tooltip" data-placement="bottom" title="Cart">
+								<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+								<span class="badge">4</span>
+							</a>
+						</li>
+						<li role="presentation">
+							<a href="#">Log out</a>
+						</li>
+						<li role="presentation">
+							<a href="account.html">Your Account</a>
+						</li>
+						<li role="presentation">
+							<a href="login.html">
+								<b>Welcome,</b>
+								<span id="userName">log in</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<nav class="navbar navbar-default nav-top">
+		<div class="container-fluid">
+			<!-- Responsive button -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+	
+			<!-- Menu -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+	
+					<!-- Categories dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="category.html">Nature</a></li>
+							<li><a href="category.html">Weddings</a></li>
+							<li><a href="category.html">Landscape</a></li>
+							<li><a href="category.html">Animals</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="all-categories.html">See all</a></li>
+						</ul>
+					</li>
+	
+					<!-- Other options -->
+					<li><a href="#">Most selled</a></li>
+					<li><a href="#">Populars</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+		<!-- Principal image with search -->
+	<div class="full-header">
+		<div class="overlay"></div>
+		<div class="search">
+			<form action="main">
+				<input type="text" placeholder="Search..." class="principal-search">
+				<button type="submit" class="principal-search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+			</form>
+		</div>
+		<div class="bottom-text">
+			Awesome pictures, awesome prices!
+		</div>
+	</div>
+	<div class="inner-content-home">
+		<div class="container">
+			<div class="row margin-bottom-20">
+				<div class="col-sm-8">
+					<h4 class="title">Top Categories</h4>
+					<div class="line-dec"></div>
+					<!-- Top categories slider -->
+
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+						<!-- Bottom indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						</ol>
+	
+						<!-- Top categories slides -->
+						<div class="carousel-inner" role="listbox">
+	
+								<!-- Top categories (item) -->
+								<div class="item active">
+									<img src="http://localhost:8888/getTopNImage?topN=1" alt="Image 1">
+									<div class="carousel-caption">
+										Weddings and special events
+									</div>
+								</div>
+		
+								<!-- Top categories (item) -->
+								<div class="item">
+									<img src="http://localhost:8888/getTopNImage?topN=2" alt="Image 2">
+									<div class="carousel-caption">
+										Landscape and nature
+									</div>
+								</div>
+		
+								<!-- Top categories (item) -->
+								<div class="item">
+									<img src="http://localhost:8888/getTopNImage?topN=3" alt="Image 3">
+									<div class="carousel-caption">
+										Animals
+									</div>
+								</div>
+							</div>
+		
+							<!-- Top categories (arrows) -->
+							<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left fa fa-angle-left" aria-hidden="true"></span>
+							</a>
+							<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right fa fa-angle-right" aria-hidden="true"></span>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<h4 class="title">Tip of the day</h4>
+						<div class="line-dec"></div>
+		
+						<!-- Tip of the day -->
+						<div class="thumbnail">
+							<img src="images/tip.jpeg.jpg" alt="Tip of the day">
+							<div class="caption">
+								<h3>¿How to get best bokeh effect?</h3>
+								<p class="sm-hide">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
+								</p>
+								<p><a href="#" class="btn btn-primary" role="button">Read more</a>
+							</div>
+						</div>
+					</div>
+			</div>
+			<!-- recent photo -->
+			<div class="row">
+				<div class="col-sm-12">
+					<h4 class="title">Recent Photo</h4>
+					<div class="line-dec"></div>
+					<div id="recent-photos">
+						<!-- <div class="item" id="photo_1">
+						</div>
+						<div class="item" id="photo_2">
+						</div>
+						<div class="item" id="photo_3">
+						</div>
+						<div class="item" id="photo_4">
+						</div>
+						<div class="item" id="photo_5">
+						</div>
+						<div class="item" id="photo_6">
+						</div>
+						<div class="item" id="photo_7">
+						</div>
+						<div class="item" id="photo_8">
+						</div> -->
+					</div>
+				</div>
+			</div>
+			
+			<!-- Categories -->
+			<div class="row">
+				<div class="col-sm-12" id="#categories">
+					<h4 class="title">Our categories <small><span class="badge">245.557</span> photos in our stock</small></h4>
+					<div class="line-dec"></div>
+				</div>
+			</div>
+			<div class="row" id="categoriesDiv">
+				<!-- <div class="col-sm-3">
+					<div class="category-block" id="architecture">
+						<a href="categor">
+							<span>Architecture</span>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="category-block" id="food">
+						<a href="http://localhost:8888/category?category=food">
+							<span>Food</span>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="category-block" id="cars">
+						<a href="category">
+							<span>Cars</span>
+						</a>
+					</div>
+				</div> -->
+				<!-- <div class="col-sm-3">
+					<div class="category-block" id="landscapes">
+						<a href="category">
+							<span>Landscapes</span>
+						</a>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</div>	
+	
+	<!-- <form name="form0" id="form0">
+		<input type = "button" id="chooseImg" onclick="choose()" value="添加图片">
+		<input type="button" id="commitImg" onclick="upload()" value="上传图片">
+		<input type="button" id="removeImg" onclick="selectImg()" value="选择图片">
+		<input type="button" id="removeImg" onclick="cancelSelect()" value="取消选择"> 
+		<input type="file" name="file" id="file" multiple="multiple" /><br>
+		<input type="hidden" name="category" id="category"/>
+		<div>
+			<ul id="dowebok" class="docs-pictures">
+			</ul>
+		</div>
+		<div></div>
+	</form> -->
+</body>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.form.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery-viewer.js"></script>
+<script src="../js/jquery.contextMenu.js"></script>
+<script src="../owl-carousel/owl.carousel.min.js"></script>
+<script src="../js/myJs.js"></script>
+<script src="../js/category.js"></script>
+<script src="../js/common.js"></script>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="../css/font-awesome.min.css">
+		<link type="text/css" rel="stylesheet" href="../css/style.css">
+		<link type="text/css" rel="stylesheet" href="../css/main.css">
+		<link type="text/css" rel="stylesheet" href="../css/viewer.min.css">
+		<link type="text/css" rel="stylesheet" href="../css/jquery.contextMenu.css">
+		<link type="text/css" rel="stylesheet" href="../css/shake.css">
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../owl-carousel/owl.carousel.css">
+		<link rel="stylesheet" type="text/css" href="../owl-carousel/owl.theme.css">
+		<link rel="stylesheet" type="text/css" href="../owl-carousel/owl.transitions.css">
+		<link rel="stylesheet" type="text/css" href="../css/templateCss.css">
+		<link rel="stylesheet" type="text/css" href="../js/layer/skin/default/layer.css">
+	
+		<style>
+			.infoLayer{
+				width: 270px;;
+				height: 100%;
+				margin: 20px 20px 20px 20px;
+			}
+			#info_layer .form-control{
+				width: 100%;
+			}
+			.info-submit{
+				margin-left: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header-bg">
+			<div class="container">
+				<div class="row flex">
+					<div class="col-xs-12 col-sm-5 col-md-4 flex">
+						<a href="main"> 
+							<img src="../img/logo.png" alt="photoMorket"/>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-7 col-md-8 flex flex-center">
+						<!-- Menu -->
+						<ul class="nav nav-pills">
+							<li role="presentation">
+								<a href="#" id="cart" data-toggle="tooltip" data-placement="bottom" title="Cart">
+									<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+									<span class="badge">4</span>
+								</a>
+							</li>
+							<li role="presentation">
+								<a href="#">Log out</a>
+							</li>
+							<li role="presentation">
+								<a href="account.html" onclick="editInfomation()">Your Account</a>
+							</li>
+							<li role="presentation">
+								<a href="login.html">
+									<b>Welcome,</b>
+									<span id="userName">log in</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inner-content-home">
+			<div class="container">
+				<div class="row margin-bottom-20">
+					<div class="col-md-3 col-sm-5">
+						<div class="img-profile text-center">
+							<img src="../img/default.jpg" class="img-responsive" alt="作者"/>
+							<div class="profile-name"> 
+								Bluce Lee
+							</div>
+						</div>
+						<h4 class="title">Personal Information</h4>
+						<div class="line-dec"></div>
+						<ul class="list-group">
+							<li class="list-group-item">
+								<b>昵称：</b> <span>胖涛涛</span>
+							</li>
+							<li class="list-group-item">
+								<b>账号：</b> <span>1108919038</span>
+							</li>
+							<li class="list-group-item">
+								<b>邮箱：</b> <span>lixintao03@163.com</span>
+							</li>
+							<li class="list-group-item">
+								<b>个人签名：</b> <span>一花一世界，一叶一菩提</span>
+							</li>
+							<li class="list-group-item">
+								<b>个人成就：</b> <span>小萌新</span>
+							</li>
+						</ul>
+						<a href="#" class="btn btn-block btn-success" onclick="editInfomation()"> Edit information</a>
+					</div>
+					<div class="col-md-6 col-sm-7">
+						<h4 class="title">Your Photo</h4>
+						<div class="line-dec"></div>
+						<div class="grid">
+							<ul id="dowebok" class="docs-pictures">
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-12">
+						<h4 class="title">Upload Photo</h4>
+						<div class="line-dec"></div>
+						<div class="input-file">
+							<form name="form0" id="form0" class="form-inline">
+								<input type="text" class="uploadFileInput" placeholder="请选择上传图片" readonly id="avatval">
+								<input type="file" name="file" id="file" multiple="multiple" style="display: none;">
+								<div class="photo-listContainer">
+								</div>
+								<a href="javascript:;" class="btn btn-block btn-success" style="width: 100%" id="avatsel1">选择图片</a>
+								<a href="#" class="btn btn-block btn-success" id="commitImg" onclick="upload()"> 上传图片</a>
+								<a href="#" class="btn btn-block btn-success" id="removeImg" onclick="selectImg()">选择图片</a>
+								<a href="#" class="btn btn-block btn-success" id="cancelImg" onclick="cancelSelect()">取消选择</a>
+								<input type="hidden" name="category" id="category">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="info_layer" class="infoLayer" style="display:none;">
+			<form>
+				<div class="form-group">
+					<label for="name">昵称</label>
+					<input type="text" class="form-control" id="nickName" name="nickName" placeholder="Your name">
+				</div>
+				<div class="form-group">
+					<label for="lastname">账号</label>
+					<input type="text" class="form-control" id="account" name="account" placeholder="Your last name">
+				</div>
+				<div class="form-group">
+					<label for="email">邮箱</label>
+					<input type="email" class="form-control" id="email" name="email" placeholder="Your email">
+				</div>
+				<div class="form-group">
+					<label for="password">个人签名</label>
+					<input type="password" class="form-control" id="sign" name="sign" placeholder="Password">
+				</div>
+				<div class="form-group">
+					<label for="passwordRepeat">个人成就</label>
+					<input type="password" class="form-control" id="achievement" name="achievement" placeholder="Repeat your password">
+				</div>
+				<button type="submit" class="btn btn-primary info-submit">Submit</button>
+			</form>
+		</div>
+		
+		
+	</body>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery.form.js"></script>
+	<script src="../js/jquery.cookie.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery-viewer.js"></script>
+	<script src="../js/jquery.contextMenu.js"></script>
+	<script src="../owl-carousel/owl.carousel.min.js"></script>
+	<script src="../js/myJs.js"></script>
+	<script src="../js/category.js"></script>
+	<script src="../js/layer/layer.js"></script>
+	<script src="../js/common.js"></script>
+</html>
